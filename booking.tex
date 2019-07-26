@@ -2,9 +2,12 @@
 \usepackage[margin=0cm, showframe, a4paper]{geometry}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[printwatermark]{xwatermark}
-\newwatermark*[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
+\usepackage{graphicx}
+\newwatermark[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{DRAFT}
 \pagenumbering{gobble}
-\pagecolor{YellowGreen}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%\pagecolor{SpringGreen}
 \begin{document}
 \noindent
 \setlength{\unitlength}{1mm}
@@ -30,7 +33,7 @@
 \put(94,-23){\footnotesize GIVEN NAMES}
 \put(93,-40){\line(1,0){107}}
 \put(94,-33){\footnotesize ADDRESS}
-\put(20,-20){\parbox[t][24mm][t]{72mm}{\centering \LARGE \bf AHC Emergency Theatre Booking Form}}
+\put(20,-20){\parbox[t][24mm][t]{72mm}{\centering \LARGE \bf \sf AHC Emergency Theatre Booking Form}}
 %\put(21.05,-22){\parbox{3cm}afgadsf
 %top box left date box
 \put(22.05,-48){\line(0,1){15}}
@@ -39,6 +42,7 @@
 \put(22,-33){\line(1,0){69}}
 \put(23,-36){\footnotesize DATE OF BOOKING}
 %Operating Surgeon box cluster
+\put(20,-53.5){\parbox[t][10mm]{180mm}{\centering \footnotesize Please submit completed form to theatre co-ordinator}}%comment above consultant cluster
 \put(20,-85){\line(0,1){30}} %vertical end L
 \put(110.5,-95){\line(0,1){20}} %middle vert
 \put(20.05,-95){\line(0,1){40}}
@@ -50,7 +54,7 @@
 \put(133,-68){\footnotesize PROPOSED TIME}
 \put(21.05,-78){\footnotesize THEATRE CO-ORDINATOR AWARE \#2488 (Y/N)}
 \put(111.05,-78){\footnotesize NURSE/BED MANAGER AWARE \#8224 (Y/N)}
-\put(21.05,-88){\footnotesize ON-CALL ANAETHETIST AWARE (Y/N)}
+\put(21.05,-88){\footnotesize ON-CALL ANAETHETIST NAME / AWARE (Y/N)}
 \put(111.05,-88){\footnotesize WARD/ADMITTING POINT/ADMITTING TIME}
 \put(199.95,-85){\line(0,1){30}}
 %\put(199.95,-95){\line(0,1){20}}
@@ -109,11 +113,6 @@
 {\bf Category 4 -- less than 24 hours -- Operation as soon as possible after resuscitation.} Patient is physiologically stable, but some risk of deterioration if left overnight.\\
 {\bf Category 5 -- less than 48 hours -- time critical surgery.} Patient's condition is stable.\\}
 }
-
- 
-
+ \put(201,-288){\rotatebox{90}{AHC Emergency Theatre Booking Form }} %vertical text band
 \end{picture}
-
- 
-
 \end{document}
